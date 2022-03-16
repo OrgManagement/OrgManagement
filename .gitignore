@@ -94,7 +94,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-*.lock
 
 # Prisma
 prisma/migrations
