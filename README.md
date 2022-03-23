@@ -7,6 +7,14 @@ Overview
 --------
 **OrgManagement** (working name) is a project focused on creating a web-based Greek and club organization interface. It's goal is to greatly reduce the effort needed to keep organizations running smoothly, reduce internal communication friction, and prevent loss of knowledge from senior members leaving. It will be a highly modular project, with each feature as it's own separate module so that organizations can customize it to their own needs. It will make use of several different integrations in order to provide a more functional and seamless experience. We'll also create an API to allow better modularization, as well as allow organizations to integrate this project into whatever they would like. 
 
+Quick Links
+-----------
+- [License: GPL-3.0](https://github.com/callumhauber/OrgManagement/blob/main/LICENSE)
+- [Code of Conduct](https://github.com/callumhauber/OrgManagement/blob/main/CODE_OF_CONDUCT.md)
+- Contribution Guidelines
+- [User Personas](https://github.com/callumhauber/OrgManagement/wiki/Design-Personas)
+- [Design System: Headless UI](https://headlessui.dev/)
+
 Features (Overall Goals)
 -------------
 * Keep record of members, positions, and external accounts
