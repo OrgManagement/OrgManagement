@@ -1,5 +1,5 @@
 function defaultTest() {
-    return true;
+  return true;
 }
 
 module.exports = defaultTest;
