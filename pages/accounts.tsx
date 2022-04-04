@@ -112,7 +112,7 @@ const AccountsPage: NextPage = () => {
     return result.map(element => element.item);
   }
 
-  const displayAccounts = useMemo(() => searchFilter());
+  const displayAccounts = useMemo(() => searchFilter(), [searchText, accounts]);
 
   const rowClasses = 'grid grid-cols-4 p-2';
   const rowFieldClasses = 'truncate'
