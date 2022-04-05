@@ -101,3 +101,6 @@ dist
 
 # Prisma
 prisma/migrations
+
+# Testing
+coverage
