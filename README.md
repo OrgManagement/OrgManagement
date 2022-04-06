@@ -13,6 +13,12 @@ Quick Links
 - [Code of Conduct](https://github.com/callumhauber/OrgManagement/blob/main/CODE_OF_CONDUCT.md)
 - Contribution Guidelines
 - [User Personas](https://github.com/callumhauber/OrgManagement/wiki/Design-Personas)
+
+
+Project Technology/Packages
+-----------
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 - [Design System: Headless UI](https://headlessui.dev/)
 
 Features (Overall Goals)
