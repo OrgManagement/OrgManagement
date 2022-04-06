@@ -98,7 +98,7 @@ const AccountsPage: NextPage = () => {
     navigator.clipboard.writeText(copyText);
   }
 
-  const searchFilter = () => {
+  const searchFilter = (searchText: string, accounts: Array<AccountInformation>) => {
     if (searchText === '') {
       return accounts;
     }
