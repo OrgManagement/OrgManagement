@@ -109,10 +109,10 @@ const AccountsPage: NextPage = () => {
     });
 
     const result = fuse.search(searchText);
-    return result.map(element => element.item);
+    return result.filter(element => element.score! < 0.5).map(element => element.item);
   }
 
-  const displayAccounts = useMemo(() => searchFilter(), [searchText, accounts]);
+  const displayAccounts = useMemo(() => searchFilter(searchText, accounts), [searchText, accounts]);
 
   const rowClasses = 'grid grid-cols-4 p-2';
   const rowFieldClasses = 'truncate'
