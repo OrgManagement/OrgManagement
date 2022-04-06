@@ -55,7 +55,7 @@ Our goals for this semester are firstly to create the core infrastructure that c
 
 Technology
 ----------
-This project is a Next.js app using a PostgresQL database. Next.js uses React and replaces Express, and is easier to work with than a more tradition LAMP stack. We'll also use an ORM (Object Relational Model) called Prisma in order to abstract database transactions and increase ease of coding and readability. Our API will use the GraphQL architecture.
+This project is a Next.js app using a PostgresQL database. Next.js uses React and replaces Express, and is easier to work with than a more traditional LAMP stack. We'll also use an ORM (Object Relational Model) called Prisma in order to abstract database transactions and increase ease of coding and readability. Our API will use the GraphQL architecture.
 
 Team
 ----
