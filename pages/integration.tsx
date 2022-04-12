@@ -5,7 +5,7 @@ import CircleIcon from '../components/icons/CircleIcon';
 import DiscordIcon from '../components/icons/discordIcon';
 import SlackIcon from '../components/icons/SlackIcon';
 
-interface IntergationCardProps {
+interface IntegationCardProps {
   type: 'discord' | 'slack';
   title: string;
 }
@@ -15,22 +15,22 @@ interface ServerDetails {
   membersOnline: number;
 }
 
-interface IntergrationDetails {
+interface IntegrationDetails {
   servers: ServerDetails[];
 }
 
-const IntergationCard: FC<IntergationCardProps> = ({ type, title }) => {
+const IntegationCard: FC<IntegationCardProps> = ({ type, title }) => {
   // TODO: Add data fetching
   const dummyServerDetails: ServerDetails = {
     members: 420,
     membersOnline: 69,
   };
-  const [ intergrationDetails, setIntergrationDetails ] = useState<IntergrationDetails>();
+  const [ integrationDetails, setIntegrationDetails ] = useState<IntegrationDetails>();
 
   useEffect(() => {
     // Simulate fetching information from the intergration's API
     setTimeout(() => {
-      setIntergrationDetails({ servers: [
+      setIntegrationDetails({ servers: [
         { members: 420, membersOnline: 69 },
         { members: 37, membersOnline: 6 },
       ]});
@@ -46,15 +46,15 @@ const IntergationCard: FC<IntergationCardProps> = ({ type, title }) => {
   return (
     <div className={cardClasses}>
       <div className='flex flex-row items-center space-x-4'>
-        <CircleIcon className={intergrationDetails !== undefined ? 'text-green-400' : 'text-red-600'}/>
+        <CircleIcon className={integrationDetails !== undefined ? 'text-green-400' : 'text-red-600'}/>
         {
           type === 'discord' ? <DiscordIcon className={iconClasses} /> : <SlackIcon className={iconClasses} />
         }
         <h2 className='text-2xl'>{title}</h2>
         {
-        intergrationDetails &&
+        integrationDetails &&
           <span className='text-lg'>
-            {`S: ${intergrationDetails.servers.length} | ${intergrationDetails.servers.map(elem => elem.membersOnline + '/' + elem.members).join(' ')}`}
+            {`S: ${integrationDetails.servers.length} | ${integrationDetails.servers.map(elem => elem.membersOnline + '/' + elem.members).join(' ')}`}
           </span>
         }
       </div>
@@ -62,8 +62,8 @@ const IntergationCard: FC<IntergationCardProps> = ({ type, title }) => {
   )
 }
 
-const Intergration: NextPage = () => {
-  const intergrations: Array<IntergationCardProps> = [
+const Integration: NextPage = () => {
+  const intergrations: Array<IntegationCardProps> = [
     { type: 'discord', title: 'Jim Bumbot' },
     { type: 'slack', title: 'Jim Bumbot Sr.' },
   ];
@@ -71,11 +71,11 @@ const Intergration: NextPage = () => {
     <section className='p-2'>
       <section id="cardContainer" className="space-y-2">
       {
-        intergrations.map((elem, idx) => <IntergationCard key={idx} {...elem} />)
+        intergrations.map((elem, idx) => <IntegationCard key={idx} {...elem} />)
       }
       </section>
     </section>
   )
 }
 
-export default Intergration;
+export default Integration;
