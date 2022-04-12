@@ -1,6 +1,7 @@
-const index = require("./users");
+const { default: handler } = require("./hello");
+const index = require("./user/add");
 
-const request = require("supertest");
+/*const request = require("supertest");
 const express = require("express");
 const app = express();
 
@@ -29,4 +30,11 @@ test("testing route works", done => {
         .get("/test")
         .expect({ array: ["hey"] }, done);
     });
-});
+});*/
+
+
+describe('Test', () => {
+  it('do a test', () => {
+    handler()
+  })
+})
