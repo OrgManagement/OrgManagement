@@ -5,7 +5,7 @@ const NavWrapper: FC = ({ children }) => {
   const routes = [
     { name: 'Home', path: '/' },
     { name: 'Account Manager', path: '/accounts' },
-    { name: 'Integrations', path: '/integrations' },
+    { name: 'Integrations', path: '/integration' },
     { name: 'Knowledge Base', path: '/wiki' }
   ];
 
