@@ -6,6 +6,6 @@ export default function handler(req, res) {
   }
   else if(req.method === 'GET')
   {
-    res.status(200).send('GET to /api/users/[id]')
+    res.status(405).send('GET to /api/users/[id]')
   }
 }

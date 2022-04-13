@@ -6,6 +6,6 @@ export default function handler(req, res) {
   }
   else if(req.method === 'GET')
   {
-    res.status(200).send('Not used')
+    res.status(405).send('Not used')
   }
 }
