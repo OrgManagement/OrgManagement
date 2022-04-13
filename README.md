@@ -7,6 +7,20 @@ Overview
 --------
 **OrgManagement** (working name) is a project focused on creating a web-based Greek and club organization interface. It's goal is to greatly reduce the effort needed to keep organizations running smoothly, reduce internal communication friction, and prevent loss of knowledge from senior members leaving. It will be a highly modular project, with each feature as it's own separate module so that organizations can customize it to their own needs. It will make use of several different integrations in order to provide a more functional and seamless experience. We'll also create an API to allow better modularization, as well as allow organizations to integrate this project into whatever they would like. 
 
+Quick Links
+-----------
+- [License: GPL-3.0](https://github.com/callumhauber/OrgManagement/blob/main/LICENSE)
+- [Code of Conduct](https://github.com/callumhauber/OrgManagement/blob/main/CODE_OF_CONDUCT.md)
+- Contribution Guidelines
+- [User Personas](https://github.com/callumhauber/OrgManagement/wiki/Design-Personas)
+
+
+Project Technology/Packages
+-----------
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Design System: Headless UI](https://headlessui.dev/)
+
 Features (Overall Goals)
 -------------
 * Keep record of members, positions, and external accounts
@@ -41,7 +55,7 @@ Our goals for this semester are firstly to create the core infrastructure that c
 
 Technology
 ----------
-This project will use the PERN stack (**P**ostgreQL, **E**xpress, **R**eact, and **N**odeJS) as it makes use of newer technologies as is easier to work with than a more tradition LAMP stack. We'll also use an ORM (Object Relational Model) called Prisma in order to abstract database transactions and increase ease of coding and readability. Our API will use the GraphQL architecture.
+This project is a Next.js app using a PostgresQL database. Next.js uses React and replaces Express, and is easier to work with than a more traditional LAMP stack. We'll also use an ORM (Object Relational Model) called Prisma in order to abstract database transactions and increase ease of coding and readability. Our API will use the GraphQL architecture.
 
 Team
 ----
