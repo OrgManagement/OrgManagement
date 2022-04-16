@@ -11,8 +11,41 @@ datasource db {
 }
 
 model Organization {
-  id          Int       @id @default(autoincrement())
-  name        String    @db.VarChar(255)
-  description String
-  createdAt   DateTime
+  id          Int                  @id @default(autoincrement())
+  name        String
+  description String?
+  createdAt   DateTime             @default(now())
+  members     OrganizationMember[]
+  modules     OrganizationModule[]
+}
+
+model User {
+  id        Int                  @id @default(autoincrement())
+  firstName String
+  lastName  String
+  email     String
+  rcsID     String?
+  joinedAt  DateTime             @default(now())
+  orgs      OrganizationMember[]
+}
+
+model OrganizationMember {
+  org     Organization @relation(fields: [orgID], references: [id])
+  orgID   Int
+  user    User         @relation(fields: [userID], references: [id])
+  userID  Int
+  isAdmin Boolean      @default(false)
+  @@id([orgID, userID])
+}
+
+model OrganizationModule {
+  org    Organization @relation(fields: [orgID], references: [id])
+  orgID  Int
+  module Module
+  @@id([orgID, module])
+}
+
+enum Module {
+  CALENDAR
+  KNOWLEDGEBASE
 }
