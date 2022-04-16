@@ -2,7 +2,7 @@ import { createMocks } from 'node-mocks-http';
 import handler from '../pages/api/event/[id]';
 
 describe('/api/[id]', () => {
-  test('returns event', async () => {
+  test.skip('returns event', async () => {
     const { req, res } = createMocks({
       method: 'GET',
       body: {
