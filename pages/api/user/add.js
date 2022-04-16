@@ -1,8 +1,19 @@
+const { PrismaClient } = require('@prisma/client')
 
+const prisma = new PrismaClient()
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method === 'POST') {
-    res.status(200).send('POST to /api/users/add')
+
+    const org = await prisma.user.create({
+      data: {
+        id: req.body.id,
+        firstName: req.body.firstname,
+        lastName: req.body.lastname,
+        email: req.body.email
+      },
+    })
+    res.status(200).send('POST to /api/user/add')
   }
   else if(req.method === 'GET')
   {

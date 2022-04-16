@@ -7,6 +7,7 @@ export default async function handler(req, res) {
 
     const organization = await prisma.organization.create({
       data: {
+        id: req.body.id,
         name: req.body.name,
         location: req.body.location,
         description: req.body.description,

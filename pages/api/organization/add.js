@@ -5,12 +5,10 @@ const prisma = new PrismaClient()
 export default async function handler(req, res) {
   if (req.method === 'POST') {
 
-    const organization = await prisma.organization.create({
+    const org = await prisma.organization.create({
       data: {
-        id: 3,
-        name: req.body.name,
-        members: [],
-        modules: []
+        id: req.body.id,
+        name: req.body.name
       },
     })
     res.status(200).send('POST to /api/organization/add')
