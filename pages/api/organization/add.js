@@ -8,11 +8,15 @@ export default async function handler(req, res) {
     const org = await prisma.organization.create({
       data: {
         id: req.body.id,
-        name: req.body.name
+        name: req.body.name,
+        description: req.body.description
       },
     })
-    res.status(200).send('POST to /api/organization/add')
+
+    res.status(200).json(org)
+
   }
+
   else if(req.method === 'GET')
   {
     res.status(405).send('Not used')

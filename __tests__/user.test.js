@@ -22,7 +22,6 @@ describe('/api/user/add', () => {
     const { req, res } = createMocks({
       method: 'POST',
       body: {
-        id: "3",
         firstname: "test",
         lastname: "name",
         email: "test@gmail.com",

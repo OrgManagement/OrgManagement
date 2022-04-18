@@ -5,21 +5,21 @@ const prisma = new PrismaClient()
 export default async function handler(req, res) {
   if (req.method === 'POST') {
 
-    const organization = await prisma.organization.create({
+    const event = await prisma.event.create({
       data: {
         id: req.body.id,
         name: req.body.name,
-        location: req.body.location,
         description: req.body.description,
-        start: req.body.start,
-        end: req.body.end
+        location: req.body.location,
+        starttime: req.body.starttime,
+        endtime: req.body.endtime
       },
     })
 
-    res.status(200).send('POST to /api/event/add')
+    res.status(200).json(event);
   }
   else if(req.method === 'GET')
   {
-    res.status(405).send('Not used')
+    res.status(405).send('Not used');
   }
 }
