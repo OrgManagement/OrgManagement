@@ -15,7 +15,7 @@ const testEvent = {
 var insertedID;
 
 describe('/api/event/add', () => {
-  test('adds event', async () => {
+  test.skip('adds event', async () => {
     const { req, res } = createMocks({
       method: 'POST',
       body: testEvent,
@@ -32,7 +32,7 @@ describe('/api/event/add', () => {
 });
 
 describe('/api/event/[id]', () => {
-  test('returns event', async () => {
+  test.skip('returns event', async () => {
     const { req, res } = createMocks({
       method: 'GET',
       query: {
