@@ -15,7 +15,7 @@ const testUser = {
 var insertedID;
 
 describe('/api/user/add', () => {
-  test('adds user', async () => {
+  test.skip('adds user', async () => {
     const { req, res } = createMocks({
       method: 'POST',
       body: testUser,
@@ -32,7 +32,7 @@ describe('/api/user/add', () => {
 });
 
 describe('/api/user/[id]', () => {
-  test('returns user', async () => {
+  test.skip('returns user', async () => {
     const { req, res } = createMocks({
       method: 'GET',
       query: {
