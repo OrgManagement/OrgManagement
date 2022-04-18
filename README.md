@@ -11,7 +11,7 @@ Quick Links
 -----------
 - [License: GPL-3.0](https://github.com/callumhauber/OrgManagement/blob/main/LICENSE)
 - [Code of Conduct](https://github.com/callumhauber/OrgManagement/blob/main/CODE_OF_CONDUCT.md)
-- Contribution Guidelines
+- [Contribution Guidelines](https://github.com/callumhauber/OrgManagement/blob/main/CONTRIBUTING.md)
 - [User Personas](https://github.com/callumhauber/OrgManagement/wiki/Design-Personas)
 
 
