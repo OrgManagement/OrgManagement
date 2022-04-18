@@ -12,7 +12,7 @@ const testOrg = {
 var insertedID;
 
 describe('/api/organization/add', () => {
-  test.skip('adds organization', async () => {
+  test('adds organization', async () => {
     const { req, res } = createMocks({
       method: 'POST',
       body: testOrg,
@@ -29,7 +29,7 @@ describe('/api/organization/add', () => {
 });
 
 describe('/api/organization/[id]', () => {
-  test.skip('returns organization', async () => {
+  test('returns organization', async () => {
 
     const { req, res } = createMocks({
       method: 'GET',
