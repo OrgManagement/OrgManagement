@@ -2,33 +2,48 @@ import { createMocks } from 'node-mocks-http';
 import handlerID from '../pages/api/user/[id]';
 import handlerAdd from '../pages/api/user/add';
 
-describe('/api/user/[id]', () => {
-  test.skip('returns user', async () => {
+jest.setTimeout(300000);
+
+const testUser = {
+  firstname: "John",
+  lastname: "Doe",
+  email: "jdoe@rpi.edu",
+  rcsid: "jdoe",
+  joinedat: new Date('2022-04-17T09:00:00Z')
+}
+
+var insertedID;
+
+describe('/api/user/add', () => {
+  test('adds user', async () => {
     const { req, res } = createMocks({
-      method: 'GET',
-      body: {
-        id: "3",
-      },
+      method: 'POST',
+      body: testUser,
     });
 
-    await handlerID(req, res);
+    await handlerAdd(req, res);
+
+    const data = JSON.parse(res._getData());
+
+    insertedID = data.id;
 
     expect(res._getStatusCode()).toBe(200);
   });
 });
 
-describe('/api/user/add', () => {
-  test.skip('adds user', async () => {
+describe('/api/user/[id]', () => {
+  test('returns user', async () => {
     const { req, res } = createMocks({
-      method: 'POST',
-      body: {
-        firstname: "test",
-        lastname: "name",
-        email: "test@gmail.com",
+      method: 'GET',
+      query: {
+        id: insertedID,
       },
     });
 
-    await handlerAdd(req, res);
+    await handlerID(req, res);
+
+    const data = JSON.parse(res._getData())
+    console.log(data);
 
     expect(res._getStatusCode()).toBe(200);
   });

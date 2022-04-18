@@ -8,12 +8,12 @@ export default async function handler(req, res) {
   }
   else if(req.method === 'GET')
   {
-    const org = await prisma.user.findUnique({
+    const user = await prisma.user.findUnique({
       where: {
         id: req.query.id
       },
     })
 
-    res.status(200).send('GET to /api/users/[id]')
+    res.status(200).json(user)
   }
 }

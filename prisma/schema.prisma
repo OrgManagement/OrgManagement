@@ -30,11 +30,11 @@ model event {
 
 model User {
   id        Int                  @id @default(autoincrement())
-  firstName String
-  lastName  String
+  firstname String
+  lastname  String
   email     String
-  rcsID     String?
-  joinedAt  DateTime             @default(now())
+  rcsid     String?
+  joinedat  DateTime             @default(now())
   orgs      OrganizationMember[]
 }
 
