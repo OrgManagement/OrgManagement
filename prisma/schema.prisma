@@ -10,6 +10,16 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+
+model event {
+  id          Int                  @id @default(autoincrement())
+  name        String
+  description String?
+  location    String?
+  starttime   DateTime             @default(now())
+  endtime     DateTime             @default(now())
+}
+
 model Organization {
   id          Int                  @id @default(autoincrement())
   name        String
@@ -44,46 +54,6 @@ model OrganizationModule {
   orgID  Int
   module Module
 
-  @@id([orgID, module])
-}
-
-enum Module {
-  CALENDAR
-  KNOWLEDGEBASE
-}
-
-model event {
-  id          Int                  @id @default(autoincrement())
-  name        String
-  description String?
-  location    String?
-  starttime   DateTime             @default(now())
-  endtime     DateTime             @default(now())
-}
-
-model User {
-  id        Int                  @id @default(autoincrement())
-  firstname String
-  lastname  String
-  email     String
-  rcsid     String?
-  joinedat  DateTime             @default(now())
-  orgs      OrganizationMember[]
-}
-
-model OrganizationMember {
-  org     Organization @relation(fields: [orgID], references: [id])
-  orgID   Int
-  user    User         @relation(fields: [userID], references: [id])
-  userID  Int
-  isAdmin Boolean      @default(false)
-  @@id([orgID, userID])
-}
-
-model OrganizationModule {
-  org    Organization @relation(fields: [orgID], references: [id])
-  orgID  Int
-  module Module
   @@id([orgID, module])
 }
 
