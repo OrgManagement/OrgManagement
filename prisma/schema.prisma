@@ -10,13 +10,13 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model event {
+model Event {
   id          Int      @id @default(autoincrement())
   name        String
   description String?
   location    String?
-  starttime   DateTime @default(now())
-  endtime     DateTime @default(now())
+  startTime   DateTime @default(now())
+  endTime     DateTime @default(now())
 }
 
 model Organization {

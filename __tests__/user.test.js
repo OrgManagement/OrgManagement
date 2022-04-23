@@ -5,11 +5,11 @@ import handlerAdd from '../pages/api/user/add';
 jest.setTimeout(300000);
 
 const testUser = {
-  firstname: "John",
-  lastname: "Doe",
+  firstName: "John",
+  lastName: "Doe",
   email: "jdoe@rpi.edu",
-  rcsid: "jdoe",
-  joinedat: new Date('2022-04-17T09:00:00Z')
+  rcsID: "jdoe",
+  joinedAt: new Date('2022-04-17T09:00:00Z')
 }
 
 var insertedID;
