@@ -11,8 +11,8 @@ export default async function handler(req, res) {
         name: req.body.name,
         description: req.body.description,
         location: req.body.location,
-        starttime: req.body.starttime,
-        endtime: req.body.endtime
+        startTime: req.body.startTime,
+        endTime: req.body.endTime
       },
     })
 

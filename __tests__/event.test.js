@@ -8,8 +8,8 @@ const testEvent = {
   name: "event",
   location: "here",
   description: "will be fun",
-  starttime: new Date('2022-04-17T12:00:00Z'),
-  endtime: new Date('2022-04-17T13:00:00Z')
+  startTime: new Date('2022-04-17T12:00:00Z'),
+  endTime: new Date('2022-04-17T13:00:00Z')
 }
 
 var insertedID;

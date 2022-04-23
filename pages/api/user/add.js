@@ -8,11 +8,11 @@ export default async function handler(req, res) {
     const user = await prisma.user.create({
       data: {
         id: req.body.id,
-        firstname: req.body.firstname,
-        lastname: req.body.lastname,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
         email: req.body.email,
-        rcsid: req.body.rcsid,
-        joinedat: req.body.joinedat
+        rcsID: req.body.rcsID,
+        joinedAt: req.body.joinedAt
       },
     })
 
